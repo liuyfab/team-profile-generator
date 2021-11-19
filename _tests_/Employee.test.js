@@ -2,12 +2,27 @@
 const Employee = require('../lib/Employee'); 
 
 test("Creating an Employee Instance Object ", () =>{
-    const testdata = new Employee(); 
+    const testData = new Employee('Jared', 1, 'jared@fakemail.com'); 
     //condition that you want to test for 
-    expect(typeof(testdata)).toBe("object"); 
+    expect(typeof(testData)).toBe("object"); 
 });
 
 test("get an employee name is from method",()=>{
-    const testname = new Employee('Jared', 1, 'jared@fakemail.com');
-    expect(testname.getName()).toBe('Jared');
+    const testName = new Employee('Jared', 1, 'jared@fakemail.com');
+    expect(testName.getName()).toBe('Jared');
+})
+
+test("gets an employee's id", () => {
+    const testId = new Employee('Jared', 1, 'jared@fakemail.com');
+    expect(testId.getId()).toBe(1);
+});
+
+test("get an emploee's email",() => {
+    const testEmail = new Employee('Jared', 1, 'jared@fakemail.com')
+    expect(testEmail.getEmail()).toBe('jared@fakemail.com');
+});
+
+test("get an employee's role",() => {
+    const testRole = new Employee('Jared', 1, 'jared@fakemail.com')
+    expect(testRole.getRole()).toBe('Employee');
 })
