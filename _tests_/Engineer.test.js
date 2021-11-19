@@ -16,6 +16,5 @@ test("gets an engineer's github", () => {
 
 test("gets an engineer's role", () => {
     const engineer = new Engineer('Alec', 2, 'alec@fakemail.com', 'ibealec');
-
     expect(engineer.getRole()).toEqual('Engineer');
 });
