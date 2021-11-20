@@ -1,4 +1,5 @@
-function generateHTMLPage(){
+function generateHTMLPage(employeeArr){
+    console.log(employeeArr);
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -8,9 +9,9 @@ function generateHTMLPage(){
         <title>Team Profile Generator</title>
     </head>
     <body>
-        <div>Manager Card</div>
-        <div>Employee Card</div>
-        <div>Intern Card</div>
+        <div>Manager </div>
+        <div>Employee </div>
+        <div>Intern </div>
     </body>
     </html>`;
 }

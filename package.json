@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/liuyfab/team-profile-generator#readme",
   "dependencies": {
+    "inquirer": "^8.2.0",
     "jest": "^27.3.1"
   }
 }
