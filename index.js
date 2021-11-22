@@ -4,7 +4,7 @@ const fs = require('fs');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-const generateHTML = require('./src/generateHTMLPage')
+const generateHTML = require('./src/generateHTMLPage');
 const generateHTMLPage = require('./src/generateHTMLPage');
 
 
@@ -50,7 +50,8 @@ function makeTeam(){
 
 function generateEmployeeCards(){
  let htmlMarkDown = generateHTMLPage(employees);
- fs.writeFileSync("", htmlMarkDown);
+ //write the index.html file using the HTML generated previously.
+  fs.writeFileSync('./dist/index.html', htmlMarkDown);
 }
 
 //create the engineer by  prompting with engineer appropriate questions

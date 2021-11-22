@@ -1,19 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Team Profile Generator</title>
-</head>
-<body>
-    <header class="jumbotron">
-        <h1>MY TEAM</h1>
-    </header>
-    <div>Manager</div>
-    <div>Employee</div>
-    <div>Intern</div>
-</body>
-</html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Team Profile Generator</title>
+    </head>
+    <body>
+        <header class="jumbotron">My Team</header>
+        <main class="container">
+            <!--team members cards holder-->
+            <div id="card-section" class = "row ">
+            <!--manager card-->
+                <div class="card md-col-3">
+                    <div class="card-header">
+                      <h4 class="card-title,name">Jared</h4>
+                      <h4 class="card-title,role ">Manager</h4>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">ID: 1</li>
+                      <li class="list-group-item">Email: jared@fakemail.com<a href="jared@fakemail.com" class="card-link"></a></li>
+                      <li class="list-group-item">Office Number: 1</li>
+                    </ul>
+                </div>
+            
+            <!--engineer card-->
+                <div class="card md-col-3">
+                    <div class="card-header">
+                    <h4 class="card-title,name">Alec</h4>
+                    <h4 class="card-title,role ">Engineer</h4>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                       <li class="list-group-item">ID: 2</li>
+                       <li class="list-group-item">Email: alec@fakemail.com<a href="alec@fakemail.com" class="card-link"></a></li>
+                       <li class="list-group-item">Github:ibealec</li>
+                    </ul>
+                 </div>
+            <!--intern card-->
+                 <div class="card md-col-3">
+                    <div class="card-header">
+                      <h4 class="card-title,name">John</h4>
+                      <h4 class="card-title,role ">Intern</h4>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">ID: 3</li>
+                      <li class="list-group-item">Email: john@fakemail.com<a href="john@fakemail.com" class="card-link"></a></li>
+                      <li class="list-group-item">School:2University</li>
+                    </ul>
+                </div>
+
+            </div>
+        </main>
+    </body>
+    </html>
