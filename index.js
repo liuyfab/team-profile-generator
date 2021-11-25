@@ -4,9 +4,11 @@ const fs = require('fs');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-const generateHTML = require('./src/generateHTMLPage');
 const generateHTMLPage = require('./src/generateHTMLPage');
-
+const path = require('path');
+const dirtPath = path.resolve(__dirname, "dist");
+const outputPath = path.join(dirtPath, "index.html");
+// const dirtPath = path.resolve(__dirname, 'index.html');
 
 
 //employees is a global array that is used to store the employee objects as they are created.
@@ -34,6 +36,7 @@ function makeManager() {
 
 makeManager();
 
+// providing choices of adding team members after making manager.
 function makeTeam(){
   inquirer.prompt([{type:"list", message: "What team member would you like to add?", name:'teamChoice', choices:['engineer','intern','Done, thanks']}])
   .then((response) =>{
@@ -50,8 +53,9 @@ function makeTeam(){
 
 function generateEmployeeCards(){
  let htmlMarkDown = generateHTMLPage(employees);
+ //console.log("HTML covereted data", htmlMarkDown); 
  //write the index.html file using the HTML generated previously.
-  fs.writeFileSync('./dist/index.html', htmlMarkDown);
+ fs.writeFileSync(outputPath, htmlMarkDown)
 }
 
 //create the engineer by  prompting with engineer appropriate questions
